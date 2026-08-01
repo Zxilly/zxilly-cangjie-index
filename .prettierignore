@@ -1,0 +1,12 @@
+.openai/
+ai-skill-references/
+coverage/
+design-qa-artifacts/
+design-references/
+dist/
+node_modules/
+scripts/
+tests/
+ux-research/
+worker/
+pnpm-lock.yaml

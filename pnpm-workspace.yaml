@@ -1,0 +1,8 @@
+allowBuilds:
+  "@parcel/watcher": true
+
+engineStrict: true
+fetchRetries: 5
+fetchRetryMaxtimeout: 60000
+fetchRetryMintimeout: 10000
+fetchTimeout: 600000

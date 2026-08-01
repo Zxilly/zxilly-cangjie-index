@@ -1,0 +1,30 @@
+# Dependencies and generated output
+node_modules/
+dist/
+coverage/
+.vite/
+*.tsbuildinfo
+
+# Local environment
+.env
+.env.*
+!.env.example
+*.local
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local design and agent artifacts
+.openai/
+AGENTS.md
+ai-skill-references/
+design-qa-artifacts/
+design-qa.md
+design-references/
+scripts/
+tests/
+ux-research/
+worker/
