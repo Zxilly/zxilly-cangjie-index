@@ -1,0 +1,83 @@
+.hero {
+  width: min(100% - 64px, 1240px);
+  min-height: 510px;
+  margin: 0 auto;
+  padding: 96px 0 82px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-copy {
+  width: 100%;
+  min-width: 0;
+}
+
+.hero h1 {
+  max-width: 800px;
+  margin: 0;
+  font-size: clamp(56px, 7.1vw, 96px);
+  font-weight: 800;
+  letter-spacing: -0.072em;
+  line-height: 0.9;
+}
+
+.search-box {
+  width: min(100%, 650px);
+  height: 58px;
+  margin-top: 38px;
+  padding: 0 18px;
+  border: 2px solid var(--strong-line);
+  background: var(--surface);
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &:focus-within {
+    border-color: var(--accent);
+  }
+
+  > svg {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 auto;
+  }
+
+  input {
+    min-width: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--ink);
+    font-size: 15px;
+    font-weight: 500;
+
+    &::placeholder {
+      color: var(--quiet);
+    }
+  }
+
+  button {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--accent);
+    }
+
+    svg {
+      width: 17px;
+      height: 17px;
+    }
+  }
+}
