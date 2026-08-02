@@ -2,6 +2,7 @@ import { Archive, ArrowUpRight } from "@phosphor-icons/react";
 import { getPrimaryProjectUrl, getProjectSources } from "../lib/catalog";
 import type { Project } from "../types/project";
 import { ProjectIcon, SourceIcon } from "./ProjectIcon";
+import { ProjectStars } from "./ProjectStars";
 
 interface ProjectItemProps {
   readonly project: Project;
@@ -32,6 +33,7 @@ export function ProjectItem({ project, contextLabel }: ProjectItemProps) {
           <span>
             {project.owner} · {project.language}
           </span>
+          <ProjectStars project={project} />
           {contextLabel ? (
             <span className="context-label">{contextLabel}</span>
           ) : null}

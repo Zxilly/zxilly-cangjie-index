@@ -9,7 +9,6 @@ const seed: ProjectSeed = {
   description: "Example project",
   category: "工具",
   language: "Cangjie",
-  stars: 0,
   updated: "2026-01-01",
   url: "https://github.com/example/example",
 };
@@ -45,6 +44,10 @@ describe("project catalog", () => {
     expect(projectNames).not.toContain("static");
     expect(projectNames).not.toContain("cangjie-card-bin");
     expect(projectNames).not.toContain("cjbind-release");
+  });
+
+  it("does not store Star count snapshots", () => {
+    expect(projects.every((project) => !("stars" in project))).toBe(true);
   });
 
   it("searches by subgroup name", () => {

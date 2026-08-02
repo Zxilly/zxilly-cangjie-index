@@ -8,7 +8,7 @@ A curated index of Zxilly's projects around the Cangjie programming language.
 - React
 - TypeScript
 - Sass
-- Vitest and ESLint
+- Vitest and Oxlint
 - pnpm
 
 ## Development
@@ -44,6 +44,15 @@ invariant at startup, and the test suite protects it in CI.
 
 Empty repositories and repositories used only to host static files, binaries, or release
 artifacts are intentionally excluded.
+
+## Live Stars
+
+Star counts are never stored in the project catalog. The browser requests GitHub's public
+repository API when the page loads and reuses each request while the page remains open. If
+GitHub's API is unavailable or rate-limited, the card falls back to a live Shields badge.
+GitCode-only repositories use GitCode's official live Star badge because its repository API
+requires a private token that must not be exposed in frontend code. Projects mirrored across
+multiple hosts use the primary GitHub repository count instead of adding mirror counts.
 
 ## Deployment
 

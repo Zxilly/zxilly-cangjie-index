@@ -200,6 +200,39 @@
   color: var(--accent);
 }
 
+.project-stars {
+  min-width: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--quiet);
+  font-variant-numeric: tabular-nums;
+
+  svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  &.is-idle,
+  &.is-loading {
+    opacity: 0.58;
+  }
+}
+
+.project-star-badge {
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+
+  img {
+    width: auto;
+    height: 18px;
+    filter: grayscale(1);
+    opacity: 0.78;
+  }
+}
+
 .archive-label {
   display: inline-flex;
   align-items: center;

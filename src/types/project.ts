@@ -15,7 +15,6 @@ export interface ProjectSeed {
   readonly description: string;
   readonly category: ProjectCategory;
   readonly language: string;
-  readonly stars: number;
   readonly updated: string;
   readonly url?: string;
   readonly gitcode?: string;
