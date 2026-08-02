@@ -2,7 +2,6 @@ import { Star } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import {
   fetchGitHubStarCount,
-  getGitCodeStarsBadgeUrl,
   getGitHubStarsBadgeUrl,
   parseGitHubRepository,
 } from "../lib/stars";
@@ -89,18 +88,6 @@ export function ProjectStars({ project }: ProjectStarsProps) {
         <span>
           {state.status === "ready" ? state.count.toLocaleString("en-US") : "—"}
         </span>
-      </span>
-    );
-  }
-
-  if (project.gitcode) {
-    return (
-      <span className="project-star-badge" title="GitCode Stars">
-        <img
-          alt={`${project.name} GitCode Stars`}
-          loading="lazy"
-          src={getGitCodeStarsBadgeUrl(project.gitcode)}
-        />
       </span>
     );
   }

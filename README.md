@@ -50,9 +50,9 @@ artifacts are intentionally excluded.
 Star counts are never stored in the project catalog. The browser requests GitHub's public
 repository API when the page loads and reuses each request while the page remains open. If
 GitHub's API is unavailable or rate-limited, the card falls back to a live Shields badge.
-GitCode-only repositories use GitCode's official live Star badge because its repository API
-requires a private token that must not be exposed in frontend code. Projects mirrored across
-multiple hosts use the primary GitHub repository count instead of adding mirror counts.
+GitCode-only repositories do not display a Star count: GitCode's numeric repository APIs
+require a private token, while its public badge cannot be read cross-origin. Projects mirrored
+across multiple hosts use the primary GitHub repository count instead of adding mirror counts.
 
 ## Deployment
 

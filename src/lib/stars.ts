@@ -47,21 +47,6 @@ export function getGitHubStarsBadgeUrl(repositoryUrl: string): string {
   return `https://img.shields.io/github/stars/${path}?style=flat&label=stars`;
 }
 
-export function getGitCodeStarsBadgeUrl(
-  repositoryUrl: string,
-  now = Date.now(),
-): string {
-  const url = new URL(repositoryUrl);
-
-  if (url.hostname.toLocaleLowerCase("en-US") !== "gitcode.com") {
-    throw new Error(`Not a GitCode repository URL: ${repositoryUrl}`);
-  }
-
-  url.pathname = `${url.pathname.replace(/\/$/u, "")}/star/badge.svg`;
-  url.search = `v=${Math.floor(now / 3_600_000)}`;
-  return url.toString();
-}
-
 export async function fetchGitHubStarCount(
   repositoryUrl: string,
   request: typeof fetch = fetch,

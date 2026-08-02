@@ -1,7 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import {
   fetchGitHubStarCount,
-  getGitCodeStarsBadgeUrl,
   getGitHubStarsApiUrl,
   parseGitHubRepository,
 } from "./stars";
@@ -19,12 +18,6 @@ describe("project Stars", () => {
     expect(getGitHubStarsApiUrl("https://github.com/Zxilly/cjv")).toBe(
       "https://api.github.com/repos/Zxilly/cjv",
     );
-    expect(
-      getGitCodeStarsBadgeUrl(
-        "https://gitcode.com/Zxilly/test_cj_ffi/",
-        3_600_000,
-      ),
-    ).toBe("https://gitcode.com/Zxilly/test_cj_ffi/star/badge.svg?v=1");
   });
 
   it("fetches the current GitHub Star count", async () => {
