@@ -61,3 +61,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5.0.0
+
+  indexnow:
+    name: Notify search engines
+    needs: deploy
+    permissions:
+      contents: read
+    uses: ./.github/workflows/indexnow.yml
