@@ -6,6 +6,7 @@ A curated index of Zxilly's projects around the Cangjie programming language.
 
 - Vite
 - React
+- React Router Framework Mode (static prerendering)
 - TypeScript
 - Sass
 - Vitest and Oxlint
@@ -35,7 +36,8 @@ src/
 ├── styles/         Sass modules grouped by responsibility
 ├── types/          Shared TypeScript types
 ├── App.tsx         Page composition and search state
-└── main.tsx        Application entry point
+├── root.tsx        HTML document and metadata
+└── routes.ts       Prerendered route configuration
 ```
 
 Project metadata lives in [`src/data/projects.ts`](src/data/projects.ts). Every included
@@ -60,7 +62,11 @@ Pushes to `master` run [the Pages workflow](.github/workflows/deploy-pages.yml),
 
 1. installs the locked pnpm dependencies;
 2. runs type checking, linting, and tests;
-3. builds the Vite application;
-4. deploys `dist/` to GitHub Pages.
+3. prerenders the project directory into complete HTML with React Router;
+4. deploys `dist/client/` to GitHub Pages.
+
+Project descriptions and links are available before JavaScript runs. Search and live
+Star counts hydrate in the browser. `public/robots.txt` and `public/sitemap.xml`
+declare the canonical homepage; update them when adding public routes.
 
 The production custom domain is `https://cj.zxilly.com`.
