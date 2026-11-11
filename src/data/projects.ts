@@ -95,7 +95,7 @@ const projectSeeds = [
     updated: "2026-07-03",
     url: "https://github.com/Zxilly/cjv",
     gitcode: "https://gitcode.com/Zxilly/cjv",
-    homepage: "https://cjv.zxilly.dev/",
+    homepage: "https://cjv.zxilly.com/",
   },
   {
     name: "cangjie-version-manifest",
